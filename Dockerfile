@@ -64,7 +64,9 @@ RUN bash install_r.bash
 ### install bash kernel ###
 RUN python3 -m bash_kernel.install
 
-### RUN pip3 install jupyter-c-kernel
+###我修改 增加 ｃ　　ｃ++
+RUN apt-get -yqq install gcc g++
+RUN pip3 install jupyter-c-kernel
 
 ### installing IJavascript
 RUN npm install -g ijavascript
