@@ -1,7 +1,6 @@
 ### start from base ###
 
-FROM ubuntu:16.04
-MAINTAINER Jan Krause <jk.work@protonmail.ch>
+FROM ubuntu
 
 ### copy configuration to container ###
 ADD notebooks /opt/notebooks
@@ -10,7 +9,7 @@ WORKDIR /opt/notebooks
 ### use better sources (good mirror selected by geoIP) ###
 # Remark : this is specific for ubuntu 16.04 xenial
 # if you change ubuntu version adapt souces.list or coment this line out.
-RUN cp sources.list /etc/apt/sources.list
+#RUN cp sources.list /etc/apt/sources.list
 
 ### update packgages ###
 RUN apt-get -yqq update
@@ -64,6 +63,8 @@ RUN bash install_r.bash
 
 ### install bash kernel ###
 RUN python3 -m bash_kernel.install
+
+### RUN pip3 install jupyter-c-kernel
 
 ### installing IJavascript
 RUN npm install -g ijavascript
