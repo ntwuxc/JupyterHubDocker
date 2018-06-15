@@ -4,7 +4,8 @@
 * Initial version : 2017-05-29
 * Version 1.0.0 : 2017-09-18
 * License : [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
-* 我想修改一些内容： 吴晓春 2018.6.12
+* 
+
 
 ** This Docker configuration generates a fully configured JupterHub server**, with::
 * simplified user management, 
